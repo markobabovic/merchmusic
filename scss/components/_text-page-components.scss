@@ -7,38 +7,76 @@ section.feature-image-section {
 
 section.text-page-section {
 	.container {
+
+		@media(max-width: $screen-xs-max){
+			padding: 0;
+		}	
+
 		.row {
 			padding-top: 85px;
 			padding-bottom: 90px;
+
+
 		}
 	}
 }
 
 .text-page-component {
+	padding-bottom: 150px;
+
+	@media(max-width: $screen-sm-max){
+		padding-bottom: 80px;
+	}	
+
 	.item {
 		@include flex;
 		@include align-items(center);
 		margin-bottom: 125px;
 
+		@media(max-width: $screen-sm-max){
+			@include flex-wrap();
+			padding: 0 30px;
+		}
+
+		@media(max-width: $screen-xs-max){
+			padding: 0;
+		}
 		&:last-of-type {
 			margin-bottom: 0;
 		}
 
 		.text {
-			margin-right: 130px;
+			margin-right: 75px;
+
+			@media(max-width: $screen-sm-max){
+				margin: 0!important;
+			}
+
+			@media(max-width: $screen-xs-max){
+				padding: 0 30px;
+			}
+
 			h2 {
 				font-size: 36px;
 				line-height: 49px;
 				font-weight: 700;
 				letter-spacing: -1.2px;
 				margin-bottom: 55px;
+
+				@media(max-width: $screen-sm-max){
+					margin-bottom: 30px;
+				}
 			}
 
 			p {
 				font-weight: 500;
 				font-size: 14px;
 				line-height: 39px;
-				margin-bottom: 40px;	
+				margin-bottom: 40px;
+
+				@media(max-width: $screen-sm-max){
+					margin-bottom: 30px;
+				}
 
 				&:last-of-type {
 					margin-bottom: 0;
@@ -47,6 +85,16 @@ section.text-page-section {
 		}
 
 		.image {
+
+			@media(max-width: $screen-sm-max){
+				order: 2;
+				margin-top: 40px;
+			}
+
+			@media(max-width: $screen-xs-max){
+				padding: 0;
+			}
+
 			img {
 				width: 100%;
 			}
@@ -55,8 +103,47 @@ section.text-page-section {
 		&:nth-child(even){
 			.text {
 				order: 2;
-				margin-left: 130px;
+				margin-left: 75px;
 				margin-right: 0;
+			}
+		}
+	}
+}
+
+.our-team-component {
+	padding-top: 30px;
+	padding-bottom: 150px;
+
+	@media(max-width: $screen-sm-max){
+		padding-bottom: 80px;
+	}	
+
+	.wrap-team-members {
+		.member {
+			padding-bottom: 30px;
+
+			.image {
+				width: 120px;
+				height: 120px;
+				border-radius: 50%;
+				margin: 0 auto;
+				overflow: hidden;
+
+				img{
+					width: 100%;
+				}
+			}
+
+			.name {
+				text-align: center;
+				margin-top: 30px;
+
+				h5 {
+					font-size: 18px;
+					font-weight: 600;
+					line-height: 40px;
+					letter-spacing: -0.6px;
+				}
 			}
 		}
 	}
