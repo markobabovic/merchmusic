@@ -30,7 +30,7 @@
 		$("body").toggleClass("menu-active");
     });    
 
-    $("header nav ul > li > a").click(function(e) {
+    $("body.home-page header nav ul > li > a").click(function(e) {
         e.preventDefault();
         var headeH = $("header").height();
         var aid = $(this).attr("href");
@@ -40,7 +40,7 @@
         $(".hamburger-menu-icon").removeClass('active');        
     });
 
-    $(".selling").click(function(e) {
+    $("body.home-page .selling").click(function(e) {
         e.preventDefault();
         var headeH = $("header").height();
         var aid = $(this).attr("href");
@@ -56,9 +56,6 @@
             $("body").removeClass("sticky");
         }
     }
-
-
-
 
 
 
