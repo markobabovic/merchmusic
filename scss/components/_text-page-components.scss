@@ -161,12 +161,77 @@ section.text-page-section {
 }
 
 .store-informations-component {
+
+	@media(max-width: $screen-xs-max){
+		padding: 0 30px;
+	}	
+
 	.store {
+		margin-bottom: 55px;
+
+		@media(max-width: $screen-xs-max){
+			margin-bottom: 30px;
+		}
+
 		h4 {
 			font-size: 24px;
 			line-height: 28px;
 			font-weight: 700;
 			letter-spacing: -0.8px;
+			margin-bottom: 30px;
+
+			@media(max-width: $screen-xs-max){
+				margin-bottom: 15px;
+			}			
 		}
+
+		span {
+			font-size: 14px;
+			line-height: 32px;
+			font-weight: 500;
+			display: block;
+			color: $dark-color-second;
+
+			> a {
+				font-size: inherit;
+				line-height: inherit;
+				font-weight: 700;
+				color: inherit;
+				position: relative;
+
+				&:after {
+					content: "";
+					position: absolute;
+					bottom: -3px;
+					left: 0;
+					right: 0;
+					height: 2px;
+					background-color: $black-color;
+				}
+			}
+		}
+
+		.adress {
+			margin-bottom: 40px;
+
+			@media(max-width: $screen-xs-max){
+				margin-bottom: 20px;
+			}				
+		}
+	}
+}
+
+.image-component {
+	padding-top: 25px;
+	padding-bottom: 50px;
+
+	@media(max-width: $screen-sm-max){
+		padding: 0 30px;
+	}
+	@media(max-width: $screen-xs-max){
+		padding: 0;
+	}	
+	img {
+		width: 100%;
 	}
 }
