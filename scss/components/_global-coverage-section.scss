@@ -1,0 +1,37 @@
+section.global-coverage-section {
+	.container {
+		background-color: $black-color;
+
+		.row {
+			padding-top: 90px;
+			padding-bottom: 62px;
+
+			@media(max-width: $screen-xs-max){
+			//	padding: 70px 30px 60px 30px;
+			}				
+
+			.global-coverage-image {
+				@media(max-width: $screen-sm-max){
+					padding-left: 40px;
+					overflow: scroll;
+				}				
+
+				img {
+					max-width: 100%;
+				}
+			}
+			
+			.button {
+				padding: 24px 87px;
+				display: block;
+				width: 254px;
+				margin: 0 auto;
+				color: $black-color;
+
+				@media(max-width: $screen-xs-max){
+					display: none;
+				}								
+			}
+		}
+	}
+}

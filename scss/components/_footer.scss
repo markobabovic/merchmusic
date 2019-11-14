@@ -1,0 +1,106 @@
+footer {
+    > .container {
+        > .row {
+            padding-bottom: 163px;
+
+            @media(max-width: $small-desktop){
+                padding: 0 20px 100px 20px;
+            }         
+            
+            @media(max-width: $screen-sm-max){
+                padding: 33px 33px 38px 33px;
+            }	            
+        }
+    }
+
+    .wrap-widgets {
+        @media(max-width: $screen-sm-max){
+            @include flex();
+            @include flex-wrap();
+        }
+     
+    }
+
+    .footer-widget {
+        @media(max-width: $screen-sm-max){
+            padding: 0;
+            margin-bottom: 60px;
+        }
+
+		@media(max-width: $screen-xs-max){
+			width: 100%;
+		}   
+
+        &:first-of-type {
+            @media(max-width: $screen-sm-max){
+                order: 5;
+            }        
+            
+            @media(max-width: $screen-xs-max){
+                margin-bottom: 0;
+            }                    
+        }
+    
+        h4 {
+            &.footer-widget-heading {
+                font-size: 18px;
+                font-weight: 700;
+                margin-bottom: 35px;
+
+                @media(max-width: $screen-sm-max){
+                    margin-bottom: 15px;
+                }
+
+                &.large {
+                    margin-bottom: 0px;
+                    font-size: 30px;
+                    font-weight: 700;
+                    margin-top: -10px;
+                }
+            }
+        }
+
+        ul {
+            li {
+                a {
+                    font-size: 14px;
+                    line-height: 28px;
+                    font-weight: 400;
+                }
+            }
+
+            &.social-media {
+                margin-top: -7px;
+
+                li {
+                    margin-bottom: 30px;
+                    line-height: normal;
+
+                    @media(max-width: $screen-xs-max){
+                        margin-bottom: 10px;
+                    }   
+
+                    &:last-of-type {
+                        margin-bottom: 0;
+                    }
+
+                    a {
+                        font-weight: 700;
+                        font-size: 18px;
+                    }
+                }
+            }
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 28px;
+            font-weight: 400;
+
+            span {
+                margin: 0 10px;
+            }
+        }
+
+    }
+}

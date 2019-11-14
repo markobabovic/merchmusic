@@ -1,0 +1,213 @@
+header {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	z-index: 3;
+	//@include global-transition(background-color, 0.3s);
+
+    -webkit-transition: background-color 0.3s, left 0.5s;
+    -moz-transition: background-color 0.3s, left 0.5s;
+    -o-transition: background-color 0.3s, left 0.5s;
+    transition: background-color 0.3s, left 0.5s;
+
+	> .container {
+
+		> .row {
+			@include align-items(center);
+			@include flex;
+			padding-top: 70px;
+
+			//@include global-transition(padding, 0.1s);
+
+			@media(max-width: $small-desktop){
+				padding: 40px 20px;
+			}
+
+			@media(max-width: $screen-sm-max){
+				padding: 23px 30px;
+				justify-content: flex-end;
+			}
+
+			@media(max-width: $screen-xs-max){
+				padding: 27px 30px;
+			}
+
+			.wrap-logo {
+				@media(max-width: $screen-sm-max){
+					display: none;
+				}
+				
+				a {
+					&.logo {
+						h1 {
+							font-size: 30px;
+							line-height: 41px;
+							font-weight: 700;
+							margin: 0;
+						}
+					}
+				}
+			}
+
+			.selling {
+				font-size: 30px;
+				line-height: 41px;
+				font-weight: 700;
+				letter-spacing: -1px;
+				display: none;
+				margin-left: 50px;
+
+				@media(max-width: $small-desktop){
+					font-size: 25px;
+					line-height: 34px;
+					margin-left: 20px;											
+				}				
+				
+				@media(max-width: $screen-sm-max){
+					display: inline-block;
+					float: right;					
+				}		
+				
+				@media(max-width: $screen-xs-max){
+					font-size: 18px;
+					line-height: 25px;
+					margin-left: 0px;						
+				}						
+			}	
+
+			.site-navigation {
+
+				@media(max-width: $screen-sm-max){
+					width: $mobile-menu-w;
+					//max-width: calc(100vw - 80px);
+					background-color: $black-color;
+					position: fixed;
+					left: -$mobile-menu-w;
+					top: 0;
+					bottom: 0;					
+					height: 100vh;
+					padding: 0;
+					//overflow: auto;
+					@include global-transition(left, 0.5s);
+				}
+
+				@media(max-width: $small-mobile){
+					width: 270px;
+					left: -270px;
+				}
+
+				.wrap-menu {
+					text-align: right;
+
+					@media(max-width: $screen-sm-max){
+						height: 100%;
+						overflow: auto;
+						padding: 50px;
+					}
+
+					.logo {
+						display: none;
+						color: $white-color;
+						font-size: 24px;
+						line-height: 18px;
+						margin-bottom: 40px;
+						font-weight: 600;
+						float: left;
+
+						@media(max-width: $screen-sm-max){
+							display: inline-block;
+						}												
+					}
+
+					nav {
+						display: inline-block;
+
+						@media(max-width: $screen-sm-max){
+							text-align: left;
+						}
+
+						ul {	
+							@include flex;
+							@include align-items(center);
+
+							@media(max-width: $screen-sm-max){
+								@include flex-wrap;
+							}
+
+							li {
+								display: inline-block;
+								padding: 0 15px;
+
+								@media(max-width: $small-desktop){
+									padding: 0 10px;									
+								}
+
+								@media(max-width: $screen-sm-max){
+									width: 100%;
+									margin-bottom: 30px;
+									padding: 0;
+								}
+
+								a {
+									font-size: 18px;
+									font-weight: 600;
+									line-height: 25px;
+									letter-spacing: -0.6px;
+									position: relative;
+
+									@media(max-width: $screen-sm-max){
+										color: $white-color;
+										font-size: 24px;
+										line-height: 28px;
+									}									
+								}
+
+								&:last-of-type {
+									padding: 0;
+
+									a {
+										font-size: 30px;
+										line-height: 41px;
+										font-weight: 700;
+										letter-spacing: -1px;
+										display: inline-block;
+										margin-left: 50px;
+
+										@media(max-width: $small-desktop){
+											font-size: 25px;
+											line-height: 34px;
+											margin-left: 20px;											
+										}	
+										
+										@media(max-width: $screen-sm-max){
+											color: $white-color;
+											font-size: 24px;
+											line-height: 28px;
+											margin-left: 0;
+											font-weight: 600;
+										}	
+										
+										&:after {
+											@media(max-width: $screen-sm-max){
+												position: absolute;
+												content: "";
+												height: 3px;
+												background-color: #F2FF00;
+												bottom: -6px;
+												left: 0;
+												right: 0;
+											}										
+										}										
+									}									
+								}
+							}
+						}
+					}
+				}
+
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+.hamburger-menu-icon {
+	padding: 5px;
+	width: 35px;
+	height: 35px;
+	position: absolute;
+    top: 25px;
+    right: -60px;
+	z-index: 12;
+	cursor: pointer;
+	display: none;
+
+	@media(max-width: $screen-sm-max){
+		display: block;
+	}
+
+	&.active {
+		span {
+			position: absolute;			
+
+			&:nth-child(1) {
+				@include rotate(45deg);
+				top: 15px;
+			}
+	
+			&:nth-child(2) {
+				display: none;
+			}
+	
+			&:nth-child(3) {
+				@include rotate(-45deg);
+				top: 10px;
+			}
+		}
+	}
+
+	span {
+		width: 25px;
+		height: 3px;
+		margin: 5px 0;
+		background-color: $black-color;
+		display: block;
+		border-radius: 0px;
+		@include global-transition(transform, 0.3s);
+
+		&:nth-child(1) {
+			margin-top: 0;
+		}
+
+		&:nth-child(2) {
+			width: 15px;
+		}
+
+		&:nth-child(3) {
+			margin-bottom: 0;
+		}
+	}
+
+}

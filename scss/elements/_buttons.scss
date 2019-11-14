@@ -1,0 +1,24 @@
+.button {
+	font-size: 30px;
+	letter-spacing: -1px;
+	color: $white-color;
+	text-align: center;
+	padding: 24px 70px;
+	font-weight: 700;
+
+	@media(max-width: $screen-xs-max){
+		padding: 20px 50px;
+	}		
+
+	&.black {
+		background-color: $black-color;
+
+		&:hover {
+			color: $white-color;
+		}
+	}
+
+	&.yellow {
+		background-color: $yellow-color;
+	}
+}

@@ -1,0 +1,89 @@
+section.integrations-section {
+	.container {
+		.row {
+			padding-top: 150px;
+			padding-bottom: 150px;
+
+			@media(max-width: $small-desktop){
+				padding-top: 70px;
+				padding-bottom: 40px;
+			}				
+
+			@media(max-width: $screen-xs-max){
+				padding-bottom: 0px;
+			}
+
+			.section-heading-component {
+				margin-bottom: 40px;
+
+				@media(max-width: $small-desktop ){
+					padding: 0 30px;
+				}		
+				
+				@media(max-width: $screen-xs-max){
+					margin-bottom: 15px;
+				}				
+			}
+		}
+	}
+}
+
+.integrations-component {
+	@media(max-width: $screen-xs-max){
+		padding: 5px;
+	}	
+
+	.item {
+		height: 245px;
+		padding: 7.5px 7.5px;
+
+		@media(max-width: $screen-xs-max){
+			height: 182px;
+			padding: 5px;
+		}		
+
+		.inner-item {
+			@include flex;
+			@include align-items(center);
+			height: 100%;
+			justify-content: center;
+			background-color: $light-color;
+			padding: 0 30px;
+		}
+		
+		.image{
+			img {
+				max-width: 100%;
+			}
+		}
+	}
+
+
+	#selling {
+		padding: 60px 0 30px 0;
+		overflow: hidden;
+
+		@media(max-width: $screen-sm-max){
+			padding: 45px 0 0 0;
+		}
+
+		@media(max-width: $screen-xs-max){
+			padding: 45px 0 0 0;
+		}
+
+		h4 {
+			font-size: 24px;
+			line-height: 40px;
+			font-weight: 600;
+			letter-spacing: -0.8px;
+			text-align: center;			
+			
+			@media(max-width: $screen-xs-max){
+				font-size: 18px;
+				line-height: 28px;
+				margin-bottom: 24px;
+				padding: 0 60px;
+			}			
+		}
+	}
+}

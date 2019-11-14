@@ -1,0 +1,83 @@
+section.instruction-steps-section {
+	.container {
+		@media(max-width: $screen-xs-max){
+			padding: 0;
+		}		
+		.row {
+			padding-top: 60px;
+			padding-bottom: 90px;
+
+			@media(max-width: $screen-sm-max){
+				padding-bottom: 30px;
+				padding-top: 40px;
+			}
+		}
+	}
+}
+
+.instruction-steps-component {
+	.step {
+		padding: 42px 35px;
+
+		@media(max-width: $screen-sm-max){
+			padding: 10px 20px;
+		}
+
+		@media(max-width: $screen-xs-max){
+			padding: 10px 35px;
+		}
+
+		&.col-sm-11 {
+			@media(max-width: $screen-xs-max){
+				padding: 0;
+			}
+		}
+
+		.inner-step {
+			background-color: $yellow-color;
+			padding: 42px 35px;
+
+			.desc {
+				h4 {
+					margin-bottom: 10px;
+				}
+			}
+		}
+
+		span {
+			&.step-number {
+				font-size: 28px;
+				line-height: 28px;
+				letter-spacing: -0.93px;
+				font-weight: 400;
+				display: block;			
+			}
+		}
+
+		.desc {
+			padding: 25px 0 0 40px;
+
+			h4 {
+				font-size: 24px; 
+				line-height: 28px;
+				font-weight: 700;
+				letter-spacing: -0.8px;
+				margin-bottom: 30px;
+			}
+
+			p {
+				font-size: 14px;
+				line-height: 32px;
+				font-weight: 400;
+			}
+		}
+	}
+	
+	.image {
+		padding: 0;
+
+		img {
+			width: 100%;
+		}
+	}
+}
