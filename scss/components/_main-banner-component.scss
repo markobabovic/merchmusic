@@ -137,6 +137,10 @@ section.main-banner-component {
 		left: 0;
 		@include rotate(-90deg);
 		
+		@media(max-width: $large-desktop){
+			left: -50px;
+		}	
+
 		ul {
 
 		  li {
@@ -156,7 +160,11 @@ section.main-banner-component {
 	&.right {
 		right: 0;
 		@include rotate(90deg);
-						  
+
+		@media(max-width: $large-desktop){
+			right: -50px;
+		}	
+
 		ul {
 
 		  li {
