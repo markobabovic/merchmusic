@@ -13,9 +13,16 @@ section.instruction-steps-section {
 			}
 		}
 	}
+
+	&.second {
+		> .container > .row {
+			padding-bottom: 0px;
+		}
+	}	
 }
 
 .instruction-steps-component {
+
 	.step {
 		padding: 42px 35px;
 
@@ -27,6 +34,10 @@ section.instruction-steps-section {
 			padding: 10px 35px;
 		}
 
+		&:last-of-type {
+			padding-bottom: 0;
+		}
+
 		&.col-sm-11 {
 			@media(max-width: $screen-xs-max){
 				padding: 0;
@@ -36,6 +47,19 @@ section.instruction-steps-section {
 		.inner-step {
 			background-color: $yellow-color;
 			padding: 42px 35px;
+
+			&.second {
+				text-align: center;
+				padding: 34px 35px;
+
+				.desc {
+					padding: 0;
+
+					h4 {
+						margin-bottom: 0;
+					}
+				}
+			}
 
 			.desc {
 				h4 {

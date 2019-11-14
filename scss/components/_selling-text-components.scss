@@ -1,0 +1,103 @@
+section.selling-text-section {
+    > .container {
+        > .row {
+            padding-top: 80px;
+
+            @media(max-width: $screen-xs-max){
+                padding-top: 40px;
+            }            
+        }
+    }
+
+    .wrap-item {
+        @include flex;
+        @include align-items(flex-start);
+
+        @media(max-width: $screen-xs-max){
+            display: block;
+        }
+
+        .text-content {
+            h2 {
+                font-size: 36px;
+                line-height: 49px;
+                margin-bottom: 28px;
+                font-weight: 700;
+
+                @media(max-width: $screen-xs-max){
+                    font-size: 28px;
+                    line-height: 38px;
+                    margin-bottom: 20px;
+                }                  
+            }
+
+            p {
+                font-size: 14px;
+                line-height: 32px;
+                margin-bottom: 45px;
+
+                @media(max-width: $screen-xs-max){
+                    margin-bottom: 20px;
+                    line-height: 28px;
+                }                
+            }
+
+            *:last-child {
+                margin-bottom: 0;
+            }
+        }
+
+        .banner-content {
+            background-color: $second-silver-color;
+            text-align: center;
+            padding: 50px 15px 65px 15px;
+            margin-top: 90px;
+            max-width: 350px;
+            float: right;
+
+            @media(max-width: $screen-xs-max){
+                width: 320px;
+                margin-top: 40px;
+                padding: 40px 15px;
+                margin: 40px auto 0 auto;
+                float: none;
+            }
+
+            h4 {
+                font-size: 30px;
+                font-weight: 700;
+
+                @media(max-width: $screen-xs-max){
+                    font-size: 28px;
+                }                
+            }
+
+            .plus {
+                font-size: 80px;
+                line-height: 109px;
+                font-weight: 200;
+                color: $silver-color;
+
+                @media(max-width: $screen-xs-max){
+                    line-height: 90px;
+                }                
+            }
+
+            .icon {
+                display: inline-block;
+                width: 50px;
+                margin-bottom: 40px;
+
+                img {
+                    max-width: 100%;
+                    max-height: 100%;
+                }
+            }
+
+            .button {
+                font-size: 24px;
+                padding: 11px 40px;                
+            }
+        }
+    }
+}
