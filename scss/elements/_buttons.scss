@@ -5,6 +5,7 @@
 	text-align: center;
 	padding: 24px 70px;
 	font-weight: 700;
+	display: inline-block;
 
 	@media(max-width: $screen-xs-max){
 		padding: 20px 50px;
@@ -20,5 +21,12 @@
 
 	&.yellow {
 		background-color: $yellow-color;
+	}
+
+	&.normal {
+		font-size: 24px;
+		padding: 11px 15px;
+		min-width: 200px;
+		
 	}
 }

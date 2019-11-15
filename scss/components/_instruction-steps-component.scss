@@ -15,6 +15,16 @@ section.instruction-steps-section {
 	}
 
 	&.second {
+		margin-bottom: 150px;
+
+		@media(max-width: $screen-sm-max){
+			margin-bottom: 100px;
+		}
+
+		@media(max-width: $screen-xs-max){
+			margin-bottom: 60px;
+		}
+
 		> .container > .row {
 			padding-bottom: 0px;
 		}
@@ -35,7 +45,7 @@ section.instruction-steps-section {
 		}
 
 		&:last-of-type {
-			padding-bottom: 0;
+			padding: 42px 25px 7.5px 25px;
 		}
 
 		&.col-sm-11 {
@@ -104,4 +114,16 @@ section.instruction-steps-section {
 			width: 100%;
 		}
 	}
+
+	.start-selling-button {
+		margin-bottom: 125px;
+		margin-left: 20px;
+
+		@media(max-width: $screen-xs-max){
+			margin: 30px auto 50px auto;
+			float: none;
+			display: block;
+			width: 200px;			
+		}		
+	}	
 }
